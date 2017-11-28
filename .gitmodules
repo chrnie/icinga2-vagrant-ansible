@@ -1,3 +1,6 @@
 [submodule "roles/chrnie.icingaweb2"]
 	path = roles/chrnie.icingaweb2
 	url = git@github.com:chrnie/ansible-role-icingaweb2.git
+[submodule "roles/chrnie.icinga2_install"]
+	path = roles/chrnie.icinga2_install
+	url = git@github.com:chrnie/ansible-role-icinga2_install.git
