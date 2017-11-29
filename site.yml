@@ -1,0 +1,9 @@
+---
+# gather facts from hosts and dump them to a directory
+- name: getfacts
+  import_playbook: 001_getfacts.yml
+
+# Apply common configuration to all hosts
+- name: basic
+  import_playbook: 002_basic.yml
+

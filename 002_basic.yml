@@ -1,0 +1,10 @@
+---
+# Apply common configuration to all hosts
+- hosts: all
+  become: True
+  vars:
+    ntp_enabled: true
+    ntp_timezone: Europe/Berlin
+  roles:
+    - { role: chrnie.icinga2_install, tags: ["common"] }
+    - { role: geerlingguy.ntp, tags: ["ntp"] }

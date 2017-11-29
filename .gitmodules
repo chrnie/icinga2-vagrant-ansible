@@ -7,3 +7,6 @@
 [submodule "roles/f500.dumpall"]
 	path = roles/f500.dumpall
 	url = git@github.com:f500/ansible-dumpall.git
+[submodule "roles/geerlingguy.ntp"]
+	path = roles/geerlingguy.ntp
+	url = git@github.com:geerlingguy/ansible-role-ntp.git
