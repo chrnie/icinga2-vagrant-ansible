@@ -7,3 +7,6 @@
 - name: basic
   import_playbook: 002_basic.yml
 
+# Apply common configuration to all hosts
+- name: Install an configure icinga2
+  import_playbook: 003_icinga2.yml

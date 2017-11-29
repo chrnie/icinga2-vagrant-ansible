@@ -48,6 +48,14 @@ nodes = { 'kerrigan.bug.int' => {
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # activate hostmanager plugin
+  if Vagrant.has_plugin?("vagrant-hostmanager")
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.manage_guest = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+  end
   nodes.each_pair do |name, options|
     config.vm.define name do |node_config|
       node_config.vm.box = options[:box_virtualbox]
@@ -60,6 +68,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       end
 
       node_config.vm.network :private_network, ip: options[:hostonly] if options[:hostonly]
+#      node_config.hostmanager.aliases = [ name ]
+
 
       # provider: parallels
       node_config.vm.provider :parallels do |p, override|
@@ -115,8 +125,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node_config.vm.provision :shell, :path => "./shell_provisioner.sh"
 
       # provisioner: install box using ansible
-      config.vm.provision "ansible" do |ansible|
-        ansible.playbook = "site.yml"
+      node_config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "vagrant_provision.yml"
         ansible.inventory_path = "hosts/testing"
         ansible.become = true
       end

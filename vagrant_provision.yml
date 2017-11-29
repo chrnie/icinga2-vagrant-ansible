@@ -1,0 +1,14 @@
+---
+# gather facts from hosts and dump them to a directory
+- name: getfacts
+  import_playbook: 001_getfacts.yml
+
+# Apply common configuration to all hosts
+- name: basic
+  import_playbook: 002_basic.yml
+
+# gather facts from hosts and dump them to a directory
+- hosts: all
+  tasks:
+    - debug:
+        msg: "Use 'ansible-playbook -i hosts/testing site.yml' to finish the installation on {{ inventory_hostname }}"

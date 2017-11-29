@@ -1,0 +1,6 @@
+---
+# Apply common configuration to all hosts
+- hosts: all
+  become: True
+  roles:
+    - { role: chrnie.icinga2_install }
