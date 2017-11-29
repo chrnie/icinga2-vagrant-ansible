@@ -4,3 +4,6 @@
 [submodule "roles/chrnie.icinga2_install"]
 	path = roles/chrnie.icinga2_install
 	url = git@github.com:chrnie/ansible-role-icinga2_install.git
+[submodule "roles/f500.dumpall"]
+	path = roles/f500.dumpall
+	url = git@github.com:f500/ansible-dumpall.git
