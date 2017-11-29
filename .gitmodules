@@ -1,12 +1,15 @@
 [submodule "roles/chrnie.icingaweb2"]
 	path = roles/chrnie.icingaweb2
 	url = git@github.com:chrnie/ansible-role-icingaweb2.git
-[submodule "roles/chrnie.icinga2_install"]
-	path = roles/chrnie.icinga2_install
-	url = git@github.com:chrnie/ansible-role-icinga2_install.git
+[submodule "roles/chrnie.icinga2"]
+	path = roles/chrnie.icinga2
+	url = git@github.com:chrnie/ansible-role-icinga2.git
 [submodule "roles/f500.dumpall"]
 	path = roles/f500.dumpall
 	url = git@github.com:f500/ansible-dumpall.git
 [submodule "roles/geerlingguy.ntp"]
 	path = roles/geerlingguy.ntp
 	url = git@github.com:geerlingguy/ansible-role-ntp.git
+[submodule "roles/geerlingguy.mysql"]
+	path = roles/geerlingguy.mysql
+	url = git@github.com:geerlingguy/ansible-role-mysql.git
