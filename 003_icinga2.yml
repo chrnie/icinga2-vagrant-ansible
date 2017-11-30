@@ -3,4 +3,4 @@
 - hosts: all
   become: True
   roles:
-    - { role: chrnie.icinga2_install }
+    - { role: chrnie.icinga2 }
