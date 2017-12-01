@@ -2,6 +2,7 @@
 # Apply common configuration to all hosts
 - hosts: localhost
   become: True
+  connection: local
   vars:
     ntp_enabled: true
     ntp_timezone: Europe/Berlin
