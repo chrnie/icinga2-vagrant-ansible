@@ -7,6 +7,10 @@
 - name: basic
   import_playbook: 002_basic.yml
 
-# Apply common configuration to all hosts
-- name: Install an configure icinga2
-  import_playbook: 003_icinga2.yml
+# Install mariaDB and init databases
+- name: Install rdbms
+  import_playbook: 003a_mariadb.yml
+
+# Install and configure icinga2
+- name: Install and configure icinga2
+  import_playbook: 004_icinga2.yml

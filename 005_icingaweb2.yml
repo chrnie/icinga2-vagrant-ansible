@@ -1,0 +1,6 @@
+---
+# Install and configure icingaweb2, its modules and add-ons
+- hosts: all
+  become: True
+  roles:
+    - { role: chrnie.icingaweb2 }
