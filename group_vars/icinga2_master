@@ -5,3 +5,10 @@ icinga2_manage_mysql: true
 icinga2_feature_ido_dbname: icinga
 icinga2_feature_ido_user: icinga
 icinga2_feature_ido_password: icinga
+
+
+---
+ic2_f_api_options: 
+  accept_config: "false"
+  accept_commands: "false"
+  ticket_salt: "TicketSalt"

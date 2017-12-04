@@ -1,5 +1,5 @@
 ---
-# Apply common configuration to all hosts
+# install and configure icinga2
 - hosts: all
   become: True
   roles:

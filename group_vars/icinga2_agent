@@ -1,0 +1,6 @@
+---
+icinga2_features: [ "checker", "api", "mainlog" ]
+ic2_f_api_options: 
+  accept_config: "true"
+  accept_commands: "true"
+  ticket_salt: "TicketSalt"
