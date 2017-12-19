@@ -1,7 +1,7 @@
 ---
 
 # Install mariaDB and init databases
-- hosts: icinga_db
+- hosts: icinga_master
   become: True
   roles:
     name: geerlingguy.mysql
