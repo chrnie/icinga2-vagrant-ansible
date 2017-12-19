@@ -7,18 +7,18 @@
     name: geerlingguy.mysql
   vars:
     mysql_databases:
-      - name: "{{icinga2_feature_idoMysql_dbname}}"
+      - name: "{{icinga2_ido_dbname}}"
         collation: utf8_general_ci
         encoding: utf8
       - name: "{{icingaweb2_dbname}}"
         collation: utf8_general_ci
         encoding: utf8
     mysql_users:
-      - name: "{{icinga2_feature_idoMysql_user}}"
+      - name: "{{icinga2_ido_user}}"
         host: "%"
-        password: "{{icinga2_feature_idoMysql_passwd}}"
-        priv: "{{icinga2_feature_idoMysql_dbname}}.*:ALL"
+        password: "{{icinga2_ido_password}}"
+        priv: "{{icinga2_ido_dbname}}.*:ALL"
       - name: "{{icingaweb2_user}}"
         host: "%"
-        password: "{{icingaweb2_passwd}}"
+        password: "{{icingaweb2_password}}"
         priv: "{{icingaweb2_dbname}}.*:ALL"

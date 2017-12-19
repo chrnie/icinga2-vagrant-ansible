@@ -1,0 +1,11 @@
+---
+
+# tests with templates
+- hosts: all
+  vars:
+    baseIni:
+      sectionC:
+        key1: override1
+        key2: override2
+  roles:
+     - { role: chrnie.testRole }

@@ -13,3 +13,6 @@
 [submodule "roles/geerlingguy.mysql"]
 	path = roles/geerlingguy.mysql
 	url = https://github.com/geerlingguy/ansible-role-mysql.git
+[submodule "roles/chrnie.testRole"]
+	path = roles/chrnie.testRole
+	url = https://github.com/chrnie/ansible-role-testRole
