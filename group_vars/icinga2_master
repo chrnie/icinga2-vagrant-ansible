@@ -2,10 +2,20 @@
 mysql_root_password: super-secure-password
 icinga2_role: master
 icinga2_features: [ "ido-mysql", "checker", "api", "notification", "mainlog" ]
-icinga2_manage_mysql: true
-icinga2_feature_ido_dbname: icinga
-icinga2_feature_ido_user: icinga
-icinga2_feature_ido_password: icinga
+
+icinga2_ido_type: mysql
+icinga2_ido_user: icinga
+icinga2_ido_password: icinga
+icinga2_ido_dbname: icinga
+icinga2_ido_host: "127.0.0.1"
+icinga2_ido_port: 3306
+
+icingaweb2_db_type: mysql
+icingaweb2_db_host: "127.0.0.1"
+icingaweb2_db_port: 3306
+icingaweb2_db_name: icingaweb
+icingaweb2_db_user: icingaweb
+icingaweb2_db_password: icingaweb
 
 ic2_f_api_options: 
   accept_config: "false"

@@ -11,6 +11,20 @@
 - name: Install rdbms
   import_playbook: 003a_mariadb.yml
 
+- hosts: all
+  become: True
+  tasks: 
+    - meta: flush_handlers 
+
 # Install and configure icinga2
 - name: Install and configure icinga2
   import_playbook: 004_icinga2.yml
+
+- hosts: all
+  become: True
+  tasks: 
+    - meta: flush_handlers 
+
+# Install and configure icinga2
+- name: Install and configure icinga2
+  import_playbook: 005_icingaweb2.yml

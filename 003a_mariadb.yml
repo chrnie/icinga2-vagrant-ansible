@@ -1,16 +1,14 @@
 ---
 
 # Install mariaDB and init databases
-- hosts: icinga_master
+- hosts: icinga2_master
   become: True
-  roles:
-    name: geerlingguy.mysql
   vars:
     mysql_databases:
       - name: "{{icinga2_ido_dbname}}"
         collation: utf8_general_ci
         encoding: utf8
-      - name: "{{icingaweb2_dbname}}"
+      - name: "{{icingaweb2_db_name}}"
         collation: utf8_general_ci
         encoding: utf8
     mysql_users:
@@ -18,7 +16,9 @@
         host: "%"
         password: "{{icinga2_ido_password}}"
         priv: "{{icinga2_ido_dbname}}.*:ALL"
-      - name: "{{icingaweb2_user}}"
+      - name: "{{icingaweb2_db_user}}"
         host: "%"
-        password: "{{icingaweb2_password}}"
-        priv: "{{icingaweb2_dbname}}.*:ALL"
+        password: "{{icingaweb2_db_password}}"
+        priv: "{{icingaweb2_db_name}}.*:ALL"
+  roles:
+    - { role: geerlingguy.mysql, tags: ["mysql"] }

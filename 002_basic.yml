@@ -1,4 +1,5 @@
 ---
+
 # Apply common configuration to all hosts
 - hosts: all
   become: True
