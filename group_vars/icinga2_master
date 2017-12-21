@@ -1,4 +1,6 @@
 ---
+
+# Role chrnie.icinga2
 mysql_root_password: super-secure-password
 icinga2_role: master
 icinga2_features: [ "ido-mysql", "checker", "api", "notification", "mainlog" ]
@@ -10,6 +12,12 @@ icinga2_ido_dbname: icinga
 icinga2_ido_host: "127.0.0.1"
 icinga2_ido_port: 3306
 
+ic2_f_api_options: 
+  accept_config: "false"
+  accept_commands: "false"
+  ticket_salt: "TicketSalt"
+
+# Role chrnie.icingaweb2
 icingaweb2_db_type: mysql
 icingaweb2_db_host: "127.0.0.1"
 icingaweb2_db_port: 3306
@@ -17,7 +25,16 @@ icingaweb2_db_name: icingaweb
 icingaweb2_db_user: icingaweb
 icingaweb2_db_password: icingaweb
 
-ic2_f_api_options: 
-  accept_config: "false"
-  accept_commands: "false"
-  ticket_salt: "TicketSalt"
+
+# role chrnie.director
+
+director_db_type: mysql
+director_db_user: director
+director_db_password: director
+director_db_name: director
+director_db_host: "127.0.0.1"
+director_db_port: 3306
+
+icingaweb2_api_user: icingaweb2
+icingaweb2_api_password: notsecuredefault
+icingaweb2_master_fqdn: kerrigan.bug.int

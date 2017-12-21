@@ -11,6 +11,9 @@
       - name: "{{icingaweb2_db_name}}"
         collation: utf8_general_ci
         encoding: utf8
+      - name: "{{director_db_name}}"
+        collation: utf8_general_ci
+        encoding: utf8
     mysql_users:
       - name: "{{icinga2_ido_user}}"
         host: "%"
@@ -20,5 +23,9 @@
         host: "%"
         password: "{{icingaweb2_db_password}}"
         priv: "{{icingaweb2_db_name}}.*:ALL"
+      - name: "{{director_db_user}}"
+        host: "%"
+        password: "{{director_db_password}}"
+        priv: "{{director_db_name}}.*:ALL"
   roles:
     - { role: geerlingguy.mysql, tags: ["mysql"] }

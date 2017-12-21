@@ -26,5 +26,5 @@
     - meta: flush_handlers 
 
 # Install and configure icinga2
-- name: Install and configure icinga2
+- name: Install and configure icingaweb2
   import_playbook: 005_icingaweb2.yml
