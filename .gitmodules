@@ -16,3 +16,9 @@
 [submodule "roles/chrnie.testRole"]
 	path = roles/chrnie.testRole
 	url = https://github.com/chrnie/ansible-role-testRole
+[submodule "roles/nsg.graphite"]
+	path = roles/nsg.graphite
+	url = https://github.com/nsg/ansible-graphite
+[submodule "roles/chrnie.active-directory"]
+	path = roles/chrnie.active-directory
+	url = https://github.com/chrnie/ansible-role-active-directory

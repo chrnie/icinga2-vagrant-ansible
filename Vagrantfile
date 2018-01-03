@@ -44,6 +44,17 @@ nodes = { 'kerrigan.bug.int' => {
               '80'   => '8086',
               '22'   => '2086'
             }
+          },
+          'raynor' => {
+            :box_virtualbox => 'opentable/win-2012r2-standard-amd64-nocm',
+            :mac	=> '020027006300',
+            :net	=> 'bug.int',
+            :hostonly   => '192.168.33.33',
+            :memory	=> '3072',
+            :cpus	=> '2',
+            :forwarded	=> {
+              '22'   => '2087'
+            }
           }
 }
 

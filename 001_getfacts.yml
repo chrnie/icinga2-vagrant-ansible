@@ -1,6 +1,6 @@
 ---
 
 # gather facts from hosts and dump them to a directory
-- hosts: all
+- hosts: linux
   roles:
      - { role: f500.dumpall, dumpall_host_destination: ./fact-dump.d/,dumpall_flat_mode: no }

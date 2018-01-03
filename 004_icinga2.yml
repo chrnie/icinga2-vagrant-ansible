@@ -1,6 +1,6 @@
 ---
 # install and configure icinga2
-- hosts: all
+- hosts: linux
   become: True
   roles:
     - { role: chrnie.icinga2 }

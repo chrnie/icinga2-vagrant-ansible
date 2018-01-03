@@ -1,0 +1,16 @@
+---
+# Install and configure icingaweb2, its modules and add-ons
+- hosts: icinga2_master
+  become: True
+  vars:
+    uwsgi_graphite_extraopts:
+      - option: http
+        value: "127.0.0.1:8080"
+      - option: plugins
+        value: router_basicauth
+      - option: route
+        value: "^/ basicauth:myRealm,foo:bar"
+      - graphite_secret_key: 'MeinkleinesgelbesFahrradwargesterngruen'
+  roles:
+    - { role: nsg.graphite }
+

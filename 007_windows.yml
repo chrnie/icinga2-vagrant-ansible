@@ -1,0 +1,5 @@
+---
+
+- hosts: raynor
+  roles:
+    - { role: chrnie.active-directory }

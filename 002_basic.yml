@@ -1,7 +1,7 @@
 ---
 
 # Apply common configuration to all hosts
-- hosts: all
+- hosts: linux
   become: True
   vars:
     ntp_enabled: true
